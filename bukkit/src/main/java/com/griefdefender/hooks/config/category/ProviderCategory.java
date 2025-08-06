@@ -87,6 +87,9 @@ public class ProviderCategory extends ConfigCategory {
     @Setting(value = "ItemsAdder")
     public boolean itemsAdder = true;
 
+    @Setting(value = "Nexo")
+    public boolean nexo = true;
+	
     @Setting(value = "Oraxen")
     public boolean oraxen = true;
     
