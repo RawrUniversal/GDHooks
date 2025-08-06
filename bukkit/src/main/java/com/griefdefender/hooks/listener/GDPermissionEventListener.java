@@ -143,6 +143,13 @@ public class GDPermissionEventListener {
                             return;
                         }
                     }
+                    if (GDHooks.getInstance().getNexoProvider() != null) {
+                        final String itemId = GDHooks.getInstance().getNexoProvider().getItemId(itemstack);
+                        if (itemId != null) {
+                            event.setNewIdentifier(itemId);
+                            return;
+                        }
+                    }
                     if (GDHooks.getInstance().getItemsAdderProvider() != null) {
                         final String itemId = GDHooks.getInstance().getItemsAdderProvider().getItemId(itemstack);
                         if (itemId != null) {
