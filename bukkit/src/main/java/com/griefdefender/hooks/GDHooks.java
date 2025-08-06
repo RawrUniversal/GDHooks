@@ -543,6 +543,10 @@ public class GDHooks {
         return this.mmoItemsProvider;
     }
 
+    public NexoProvider getNexoProvider() {
+        return this.nexoProvider;
+    }
+    
     public McMMOProvider getMcMMOProvider() {
         return this.mcmmoProvider;
     }
