@@ -147,6 +147,7 @@ public class GDHooks {
     private MythicMobsProvider mythicMobsProvider;
     private NovaProvider novaProvider;
     private OraxenProvider oraxenProvider;
+    private NexoProvider nexoProvider;
     private OreRegeneratorProvider oreRegeneratorProvider;
     private SquaremapProvider squaremapProvider;
     private RevoltCratesProvider revoltCratesProvider;
@@ -278,6 +279,10 @@ public class GDHooks {
         if (Bukkit.getPluginManager().getPlugin("ItemsAdder") != null && Bukkit.getPluginManager().getPlugin("ItemsAdder").isEnabled() && this.config.getData().providerCategory.itemsAdder) {
             this.itemsAdderProvider = new ItemsAdderProvider();
             this.getLogger().info("ItemsAdder provider enabled!");
+        }
+        if (Bukkit.getPluginManager().getPlugin("Nexo") != null && Bukkit.getPluginManager().getPlugin("Nexo").isEnabled() && this.config.getData().providerCategory.nexo) {
+            this.nexoProvider = new NexoProvider();
+            this.getLogger().info("Nexo provider enabled!");
         }
         if (Bukkit.getPluginManager().getPlugin("MMOItems") != null && Bukkit.getPluginManager().getPlugin("MMOItems").isEnabled() && this.config.getData().providerCategory.mmoItems) {
             this.mmoItemsProvider = new MMOItemsProvider();
